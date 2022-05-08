@@ -1,4 +1,4 @@
-import "./App.css";
+import React from "react";
 
 function App() {
   const onSubmit = () => {
@@ -9,7 +9,7 @@ function App() {
     if (event.KeyCode === 13) {
       onSubmit();
     }
-  }
+  };
 
   return (
     <div className="App">
