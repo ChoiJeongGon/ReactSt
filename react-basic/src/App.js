@@ -1,37 +1,26 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 function App() {
-  const [text, setText] = useState('hello');
-  const onSubmit = () => {
-    alert("submitted");
-  };
+  const [count, setCount] = useState(0);
+  const [coco, setCoco] = useState(0);
+  useEffect(( ) => {
+    console.log(count)
+  }, [count, coco])
+  
 
-  const onKeyUp = (event) => {
-    if (event.KeyCode === 13) {
-      onSubmit();
-    }
-  };
-
-  // let text = 'hello1';
-
-  const updateText = () => {
-    // text = 'Coder';
-    setText('Coder')
-    console.log(text)
+  useEffect(() => {
+    console.log('first rendering')
+  }, [])
+  const increment = () => {
+    setCount(count + 1);
   }
-
-  return (
+    return (
     <div className="App">
-      <input onKeyUp={onKeyUp} />
-      <button onClick={onSubmit}>Submit</button>
-
-
-      <br /><br />
-
-      <span>{text}</span>
-      <button onClick={updateText}>Update</button>
+      <h1>Code</h1>
+      <button onClick={increment}>Click</button>
+      <button onClick={() =>setCoco(coco + 1)}>Click1</button>
     </div>
-  );
+  )
 }
 
 export default App;
