@@ -21,12 +21,16 @@ function App() {
   });
   const addMovie = (event) =>{
     event.preventDefault();
+    // 기존 목록에 추가
     setMovies([
       ...movies,
       {
       title: movieTitle,
       year: movieYear,
-    }])
+    }]);
+    // 추가된 목록 삭제 
+    setMovieTitle('');
+    setMovieYear('');
   }
   return (
     <div className="App">
