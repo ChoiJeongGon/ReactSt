@@ -29,7 +29,7 @@ const MovieForm = ({addMovie}) => {
       ></input>
       <br />
       <input
-        type="text"
+        type="number"
         value={movieYear}
         placeholder="개봉년도"
         onChange={(e) => setMovieYear(e.target.value)}
