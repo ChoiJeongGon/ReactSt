@@ -36,6 +36,7 @@ function App() {
     <Router>
     <div className="App">
       <Navber />
+      <Switch>
       <Route path="/movies">
       <h1>Moive List</h1>
       <MovieForm addMovie={addMovie} />
@@ -47,7 +48,7 @@ function App() {
       <Route path="/">
         <h1>Home</h1>
       </Route>
-      
+      </Switch>
     </div>
     </Router>    
   );
