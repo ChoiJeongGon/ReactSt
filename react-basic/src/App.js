@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Movie from "./components/Movie";
 import MovieForm from "./components/MovieForm";
 import Navber from "./components/Navbar";
+import Users from "./pages/Users";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -42,11 +44,11 @@ function App() {
       <MovieForm addMovie={addMovie} />
       {renderMovies}
       </Route>
-      <Route path="/users">
-        <h1>Users</h1>
-      </Route>
-      <Route path="/">
+      <Route path="/" exact> 
         <h1>Home</h1>
+      </Route>
+      <Route path="/users">
+        <Users />
       </Route>
       </Switch>
     </div>
