@@ -38,6 +38,7 @@ function App() {
     <Router>
     <div className="App">
       <Navber />
+      <div className="container">
       <Switch>
       <Route path="/movies">
       <h1>Moive List</h1>
@@ -51,6 +52,7 @@ function App() {
         <Users />
       </Route>
       </Switch>
+    </div>
     </div>
     </Router>    
   );
