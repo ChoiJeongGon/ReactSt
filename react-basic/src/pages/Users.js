@@ -19,7 +19,7 @@ const Users = () => {
     <>
       <h1>Users</h1>
       {loading ? <Spinner /> :
-      <UserList users={users}/>}
+      <UserList users={users}/>} 
     </>
   );
 };
